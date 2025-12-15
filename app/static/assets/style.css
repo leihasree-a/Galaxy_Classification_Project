@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("pexels.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* fallback color */
+    text-align: center;
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #1c4ba9, #3399ff, #1793bd);
+    background-clip: text;
+    -webkit-background-clip: text; /* for Chrome, Safari */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback for standard browsers */
+}
+
+p {
+    font-size: 30px;
+    line-height: 1.5;
+    background: linear-gradient(90deg, #00FFFF, #1c85d5, #00bbff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    transform: scale(1.05);
+}
+
+
+/* Input Form Styling */
+.feature-form {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.feature-form table {
+    width: 100%;
+    border-spacing: 15px 10px;
+}
+
+.feature-form label {
+    font-weight: 600;
+    color: #66ccff;
+}
+
+.feature-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3399ff;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+.feature-form input[type="number"]::placeholder {
+    color: #cce6ff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #66ccff, #3399ff, #00bfff);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #3399ff, #00bfff, #66ccff);
+}
+
+body {
+    background-image: url("pexels.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    background: linear-gradient(90deg, #1b10ef, #326ded); /* lighter blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px #2199da09; /* subtle shadow for readability */
+}
+
+
+/* Output page styling */
+.result-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 50, 0.8); /* dark transparent card */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    color: #a0c4ff; /* soft blue text */
+    font-family: 'Arial', sans-serif;
+}
+
+.result-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #caf0f8;
+}
+
+.result-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.result-card h2 {
+    font-size: 28px;
+    color: #90e0ef;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0096c7;
+}
+

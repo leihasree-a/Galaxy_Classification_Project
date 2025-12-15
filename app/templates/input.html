@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galaxy Feature Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+</head>
+<body>
+    <h1>Enter Galaxy Features</h1>
+
+    <form action="/submit" method="POST" class="feature-form">
+        <table>
+            <tr>
+                <td><label>specobjid:</label></td>
+                <td><input type="number" step="any" name="specobjid" required></td>
+            </tr>
+            <tr>
+                <td><label>modelFlux_i:</label></td>
+                <td><input type="number" step="any" name="modelFlux_i" required></td>
+            </tr>
+            <tr>
+                <td><label>modelFlux_z:</label></td>
+                <td><input type="number" step="any" name="modelFlux_z" required></td>
+            </tr>
+            <tr>
+                <td><label>petroRad_u:</label></td>
+                <td><input type="number" step="any" name="petroRad_u" required></td>
+            </tr>
+            <tr>
+                <td><label>petroRad_g:</label></td>
+                <td><input type="number" step="any" name="petroRad_g" required></td>
+            </tr>
+            <tr>
+                <td><label>petroRad_i:</label></td>
+                <td><input type="number" step="any" name="petroRad_i" required></td>
+            </tr>
+            <tr>
+                <td><label>petroRad_r:</label></td>
+                <td><input type="number" step="any" name="petroRad_r" required></td>
+            </tr>
+            <tr>
+                <td><label>petroRad_z:</label></td>
+                <td><input type="number" step="any" name="petroRad_z" required></td>
+            </tr>
+            <tr>
+                <td><label>petroR50_z:</label></td>
+                <td><input type="number" step="any" name="petroR50_z" required></td>
+            </tr>
+            <tr>
+                <td><label>redshift:</label></td>
+                <td><input type="number" step="any" name="redshift" required></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Predict" class="submit-btn">
+    </form>
+</body>
+</html>
