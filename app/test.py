@@ -15,7 +15,7 @@ with open(r"C:\Users\Admin\OneDrive\Documents\galaxy-classification-project\app\
 def home():
     return render_template("home.html")
 
-# Input page route  (you did NOT add this earlier)
+# Input page route 
 @app.route("/input")
 def input_page():
     return render_template("input.html")
