@@ -1,12 +1,13 @@
 import json
 from pathlib import Path
 
-import joblib
 import pandas as pd
 from flask import Flask, render_template, request
+from xgboost import XGBClassifier
 
 BASE = Path(__file__).parent
-model = joblib.load(BASE / "galaxy_model.joblib")
+model = XGBClassifier()
+model.load_model(str(BASE / "galaxy_model.json"))
 with open(BASE / "model_features.json") as f:
     FEATURES = json.load(f)
 
