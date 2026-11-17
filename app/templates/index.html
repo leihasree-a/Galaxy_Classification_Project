@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SDSS Galaxy Classifier</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.5; color: #1a1a2e; background: #f7f7fb; }
+  h1 { margin-bottom: 4px; }
+  .sub { color: #555; margin-top: 0; }
+  form { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  label { font-weight: 600; font-size: 14px; display: block; }
+  small { color: #666; display: block; }
+  input { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #bbb; border-radius: 6px; box-sizing: border-box; }
+  button { margin-top: 18px; padding: 10px 22px; border: 0; border-radius: 8px; background: #3b4cca; color: #fff; font-size: 16px; cursor: pointer; }
+  .result { margin-top: 18px; padding: 16px; border-radius: 12px; background: #eef1ff; }
+  .error { margin-top: 18px; padding: 12px; border-radius: 8px; background: #ffe9e9; color: #8a1f1f; }
+  .note { margin-top: 24px; font-size: 14px; color: #444; }
+</style>
+</head>
+<body>
+<h1>SDSS Galaxy Classifier</h1>
+<p class="sub">Starburst or starforming? Enter a galaxy's photometric measurements.</p>
+
+<form method="post">
+  <div class="grid">
+    {% for key in features %}
+    <div>
+      <label for="{{ key }}">{{ fields[key][0] }}</label>
+      <small>{{ fields[key][1] }}</small>
+      <input id="{{ key }}" name="{{ key }}" type="number" step="any" required
+             value="{{ values.get(key, fields[key][2]) }}">
+    </div>
+    {% endfor %}
+  </div>
+  <button type="submit">Classify</button>
+</form>
+
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+{% if result %}
+<div class="result">
+  <strong>Prediction: {{ result.label }}</strong><br>
+  Model's estimated chance of being a starburst: {{ result.prob_starburst }}%
+</div>
+{% endif %}
+
+<div class="note">
+  <strong>About this model.</strong> XGBoost trained on 100,000 SDSS galaxies, using photometry only
+  (no spectrum needed). On held-out data: accuracy 0.875, starburst precision 0.773,
+  recall 0.704, F1 0.737. It misses about 3 in 10 real starbursts, so treat the output as an
+  estimate, not a measurement. The labels come from spectra, and the model has been tested only on this one dataset.
+  <br><a href="https://github.com/leihasree-a/Galaxy_Classification_Project">Code and full results on GitHub</a>
+</div>
+</body>
+</html>
